@@ -1,5 +1,7 @@
 ### Khansa Jovita - 2106651686 - PBP D
 
+# Tugas 7: Elemen Dasar Flutter
+
  ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Stateless widget adalah widget yang tidak dapat diubah, isinya berupa halaman yang bersifat statis. Sedangkan stateful widget adalah widget yang dapat diubah dan isinya dapat berupa halaman widget yang dinamis. 
 
@@ -25,3 +27,31 @@ Const dan final sama-sama merupakan variabel immutable. Namun, const merupakan v
 3. Buat text yang menyatakan genap atau ganjil sesuai dengan angkanya, dan ubah warna sesuai dengan ganjil atau genap. Gunakan if condition untuk kondisi ini.  
 4. Membuat button kurang dan tambah dan melakukan bonus di mana button kurang tidak timbul saat angka di 0 dengan menggunakan Visibility.
 5. Run program jika sudah selesai untuk mengecek apakah tampilan sudah sesuai atau belum. 
+
+# Tugas 8: Flutter Form
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+`Navigator.push()` digunakan untuk menambahkan route baru, namun route sebelumnya tetap tersimpan pada _stack_. Sedangkan `Navigator.pushReplacement()` juga menambahkan route baru, namun route sebelumnya tidak akan tersimpan pada _stack_. 
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- SizedBox = digunakan untuk menambahkan jarak secara horizontal maupun vertikal
+- TextFormField = Sebagai widget yang digunakan untuk membuat form untuk user mengisi
+- ListView = Widget untuk menampilkan daftar item
+- Navigator.pop = widget untuk mengembalikan halaman terakhir atau menghilangkan halaman paling atas
+- DropdownButtonField = widget untuk menu dropdown dalam bentuk form
+- TextButton = widget untuk menampilkan button yang berisi teks
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onPressed
+- onChanged
+- onTap
+- onSaved
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Pada dasarnya navigator sama dengan data stack. Halaman pada aplikasi disebut sebagai _route_, yang mana jika kita berada pada suatu halaman, maka halaman tersebut sudah berada dalam navigator. Jika melakukan push, maka halaman akan terganti menjadi halaman baru. Namun, jika melakukan pop, maka kita akan kembali ke halaman sebelumnya.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat sebuah drawer sebagai menu navigasi yang berisi `counter_7`, `Tambah Budget`, dan `Data Budget`. 
+2. Membuat page baru yang berupa form degan nama `form.dart`, di mana dibuat sebuah form untuk memasukkan budget pengeluaran dan pemasukan
+3. Pada form page, dibuat variabel-variabel yang menampung string, integer, dan list untuk data yang akan diberikan dari user.
+4. Membuat page baru juga bernama `budget.dart` yang berupa tampilan dari input form tersebut yang tampilannya berbentuk list. 
