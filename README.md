@@ -55,3 +55,24 @@ Pada dasarnya navigator sama dengan data stack. Halaman pada aplikasi disebut se
 2. Membuat page baru yang berupa form degan nama `form.dart`, di mana dibuat sebuah form untuk memasukkan budget pengeluaran dan pemasukan
 3. Pada form page, dibuat variabel-variabel yang menampung string, integer, dan list untuk data yang akan diberikan dari user.
 4. Membuat page baru juga bernama `budget.dart` yang berupa tampilan dari input form tersebut yang tampilannya berbentuk list. 
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya, data dari JSON langsung didecode dengan `jsonDecode` berupa `Map[str, dynamic]`. Yang mana hal tersebut menjadi lebih rentan adanya runtime error dan tidak dapat mendeteksi value dari attribute-nya. Sehingga tanpa model, pengambilan data JSON tidak begitu bagus.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Column = Widget untuk membuat child menjadi kolom
+- Center = Widget untuk membuat child jadi di tengah
+- Container = Membungkus per child 
+- TextButton = widget untuk text menjadi button
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Kirim http request dengan url yang nantinya server akan mengembalikan http response dengan menggunakan library `http`, Response yang dikembalikan akan didecode dengan menggunakan `jsonDecode()` dan disimpan. Kemudian, hasilnya akan digunakan untuk ditampilkan dengan menggunakan `ListView.builder()`.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan `ListTile` untuk `mywatchlist_page.dart` pada drawer di setiap file dart.
+2. Buat file `watchlist.dart` yang berisikan model dari JSON. 3. Melakukan fetch data dari heroku di file baru untuk menampilkan list mywatchlist.
+4. Gunakan `GestureDetector` untuk dapat melakukan tap pada setiap list mywatchlist di file `mywatclist_page.dart`.
+5. Buat file detail, untuk memberikan detail dari watchlist-nya, dan tambahkan tombol back untuk kembali ke page sebelumnya.
+
